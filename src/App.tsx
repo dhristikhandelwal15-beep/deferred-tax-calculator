@@ -26,7 +26,7 @@ function downloadFile(name: string, content: string, type: string) {
 
 function csvEscape(value: string | number) {
   const str = String(value ?? '');
-  return `"${str.replaceAll('"', '""')}"`;
+ return `"${str.replace(/"/g, '""')}"`;
 }
 
 export default function App() {
